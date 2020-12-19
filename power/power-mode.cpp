@@ -87,7 +87,7 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
             struct input_event ev;
             ev.type = EV_SYN;
             ev.code = SYN_CONFIG;
-            ev.value = enabled ? kInputEventWakeupModeOn : kInputEventWakeupModeOff;
+            ev.value = enabled ? kInputEventWakeupModeOff : kInputEventWakeupModeOn;
             write(fd, &ev, sizeof(ev));
             close(fd);
         }
