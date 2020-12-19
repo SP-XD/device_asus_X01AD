@@ -646,12 +646,6 @@ service charger_monitor /system/bin/charger_monitor
     group root
     disabled
 
-service vendor.power-hal /vendor/bin/hw/android.hardware.power-service-qti
-    override
-    class hal
-    user system
-    group system input
-
 service qbcharger /charger -m 1
     disabled
     oneshot
