@@ -37,11 +37,11 @@ SAKURA_OFFICIAL := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_MODEL=ASUS_X01AD \
-    PRIVATE_BUILD_DISC="redfin-user 11 RQ2A.210305.006 7119741 release-keys"
+	PRIVATE_BUILD_DISC="redfin-user 11 RQ2A.210305.006 7119741 release-keys"
 
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+	ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
