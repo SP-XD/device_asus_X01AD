@@ -10,8 +10,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<config>
-    <component-override package="com.android.bluetooth" >
-        <component class=".sap.SapService" enabled="true" />
-    </component-override>
-</config>
+<resources>
+    <bool name="call_recording_enabled">true</bool>
+    <integer name="call_recording_audio_source">4</integer>
+</resources>
