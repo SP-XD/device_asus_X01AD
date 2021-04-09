@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The KangOs Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -13,11 +13,11 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosp
+    $(LOCAL_PATH)/overlay-kang
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-aosp/lineage-sdk
+    $(LOCAL_PATH)/overlay-kang/lineage-sdk
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := X01A,X01AD
@@ -30,7 +30,7 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=288
+    ro.sf.lcd_density=420
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -146,6 +146,9 @@ PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
 
 # Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=420
+    
 PRODUCT_PACKAGES += \
     copybit.msm8953 \
     gralloc.msm8953 \
