@@ -1,10 +1,12 @@
-#
+
 # Copyright (C) 2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 DEVICE_PATH := device/asus/X01AD
+
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # Arch
 TARGET_ARCH := arm64
@@ -201,3 +203,4 @@ TARGET_HAS_BROKEN_WLAN_SET_INTERFACE := true
 
 # Inherit from the proprietary version
 -include vendor/asus/X01AD/BoardConfigVendor.mk
+
