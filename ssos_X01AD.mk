@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS/Sakura Project
+# Copyright (C) 2020 The Shapeshift Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -13,8 +13,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit common sakura/lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common ssos stuff.
+$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_GAPPS_ARCH := arm64
 
@@ -24,16 +24,20 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers.
 PRODUCT_DEVICE := X01AD
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := ssos_X01AD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X01AD
 PRODUCT_MANUFACTURER := asus
 TARGET_VENDOR := asus
 BOARD_VENDOR := asus
 
-#sakura flags
-SAKURA_MAINTAINER := SP-XD
-SAKURA_OFFICIAL := false
+# Inherit ShapeShiftOS Official build stuff.
+SSOS_BUILD_TYPE := UNOFFICIAL
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Inherit ShapeShiftOS common properties.
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.ssos.cpu=SD632
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_MODEL=ASUS_X01AD \
