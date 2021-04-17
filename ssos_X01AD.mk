@@ -1,4 +1,5 @@
 #
+#
 # Copyright (C) 2020 The Shapeshift Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -34,6 +35,8 @@ BOARD_VENDOR := asus
 # Inherit ShapeShiftOS Official build stuff.
 SSOS_BUILD_TYPE := UNOFFICIAL
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USES_BLUR := true
+
 
 # Inherit ShapeShiftOS common properties.
 PRODUCT_PRODUCT_PROPERTIES += \
